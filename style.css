@@ -20,6 +20,7 @@ body {
   line-height: 1.5;
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
+  font-family: "Nunito", sans-serif;
 }
 
 /* 6. Improve media defaults */
@@ -80,63 +81,53 @@ a, a:visited{
     grid-row: 1 / 3;
 
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 6fr 1/2fr 3fr ;
+    grid-template-columns: auto;
+    grid-template-rows: min-content min-content auto ;
+    gap: 4rem;
+
+    font-size: 1.5rem;
+    padding: 1rem;
+    z-index: 10;
+
+    font-family: "Nunito", sans-serif;
 }
 
-.branding{
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr ;
+.brand{
+  display:inline;
 }
 
 .branding > i {
   font-size: 3rem;
-  justify-self: end;
-  align-self: center;
-}
-.branding > h1 {
-  justify-self: start;
-  align-self: center;
-  padding-left: 1rem;
 }
 
-.nav{
+.branding > h1{
+  justify-self: start;
+}
+
+.branding{
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  grid-template-columns: 80px 1fr;
+  align-items: center;
+  justify-items: center;
 }
 
-.nav > i {
-  font-size: 2rem;
-  justify-self: end;
-  align-self: center;
-}
-
-.nav > a {
-  justify-self: start;
-  align-self: center;
-  padding-left: 1rem;
-}
-
-.settings{
-  grid-column: 1 / 2;
-  grid-row: 4 / 5;
-
+.nav > div , .settings > div {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  padding-bottom: 4rem;
+  grid-template-rows: 1fr;
+  grid-template-columns: 2rem 1fr;
+  align-items: center;
+  gap: 1rem;
 }
 
-.settings > i {
+.nav > div > .mdi , .settings > div > .mdi{
   font-size: 2rem;
-  justify-self: end;
-  align-self: center;
 }
 
-.settings > a {
-  justify-self: start;
-  align-self: center;
-  padding-left: 1rem;
+.nav, .settings{
+  padding-left: 1.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .sidebar {
@@ -154,7 +145,7 @@ header{
     grid-template-rows: auto auto ;
 
     padding: 1rem;
-    filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.183));
 }
 
 input{
@@ -270,7 +261,7 @@ button{
   border-left: 0.6rem rgb(255, 196, 0) solid;
   border-radius: 10px;
   padding: 1rem;
-  filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.255));
 }
 .card > h3,p{
   padding: 0 1rem;
@@ -296,7 +287,7 @@ button{
   border-radius: 10px;
   padding: 1rem;
   margin: 1rem 0;
-  filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(2px 2px 6px rgba(113, 113, 113, 0.401));
 }
 
 .announcement-content > *:not(:last-child){
